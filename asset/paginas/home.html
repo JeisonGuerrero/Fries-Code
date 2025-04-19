@@ -17,8 +17,8 @@
             <!-- DEJO LOS ICONOS COMO GUIA PARA EL BACK -->
             <div class="icons">
                 <span>🔍</span>
-                <span>🛒</span>
-            </div>
+                <button id="icono-carrito">🛒</button>
+            </div>         
         </div>
         <nav class="navbar">
             <a href="/Fries-Code/asset/paginas/index.html" target="_blank">INICIO</a>
@@ -33,12 +33,24 @@
         <!-- AQUI SE DEBE ENLAZAR LAS TARJETAS DE LOS PRODUCTOS -->
         <section class="comida">
             <h2>COMIDA CON SABOR A CODIGO</h2>
-            <div class="tarjeta_comida"></div>
+            <div class="contenedor-productos" id="contenedor-productos"></div>
         </section>
     </main>
+
+    <!-- Ventana flotante del carrito -->
+    <div id="carrito-flotante" class="oculto">
+        <h3>Mi Carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total-carrito">0</span></p>
+        <button onclick="cerrarCarrito()">Cerrar</button>
+    </div>    
 
     <footer>        
         <p>&copy; 2025 Comida Fries & code. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="/Fries-Code/asset/js/productos.js"></script>
+    <script src="/Fries-Code/asset/js/menu.js"></script>
+    <script src="/Fries-Code/asset/js/carrito-flotante.js"></script>
 </body>
 </html>
