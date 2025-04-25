@@ -1,0 +1,94 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Perro Clásico",
+      "precio": 12000,
+      "categoria": "perro",
+      "imagen": "img/perro1.jpg",
+      "ingredientes": "",
+      "descripcion": "",
+      "cantidad": 100
+    },
+    {
+      "id": 2,
+      "nombre": "Perro con Queso",
+      "precio": 14000,
+      "categoria": "perro",
+      "imagen": "img/perro2.jpg",
+      "ingredientes": "",
+      "descripcion": "",
+      "cantidad": 100
+    },
+    {
+      "id": 3,
+      "nombre": "Perro Especial",
+      "precio": 16000,
+      "categoria": "perro",
+      "imagen": "img/perro3.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    },
+    {
+      "id": 4,
+      "nombre": "Pizza Hawaiana",
+      "precio": 18000,
+      "categoria": "pizza",
+      "imagen": "img/pizza1.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    },
+    {
+      "id": 5,
+      "nombre": "Pizza de Pepperoni",
+      "precio": 20000,
+      "categoria": "pizza",
+      "imagen": "img/pizza2.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    },
+    {
+      "id": 6,
+      "nombre": "Pizza 3 Quesos",
+      "precio": 22000,
+      "categoria": "pizza",
+      "imagen": "img/pizza3.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    },
+    {
+      "id": 7,
+      "nombre": "Hamburguesa Clásica",
+      "precio": 15000,
+      "categoria": "hamburguesa",
+      "imagen": "img/hamburguesa1.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    },
+    {
+      "id": 8,
+      "nombre": "Hamburguesa Doble",
+      "precio": 18000,
+      "categoria": "hamburguesa",
+      "imagen": "img/hamburguesa2.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    },
+    {
+      "id": 9,
+      "nombre": "Hamburguesa BBQ",
+      "precio": 20000,
+      "categoria": "hamburguesa",
+      "imagen": "img/hamburguesa3.jpg",
+      "ingredientes":"",
+      "descripcion":"",
+      "cantidad": 100
+    }
+  ]
+}  
