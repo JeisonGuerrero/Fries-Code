@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resumen de Compra</title>
+  <link rel="stylesheet" href="/Fries-Code/asset/css/pago.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+        <button class="menu-btn">☰</button>
+        <img src="/Fries-Code/asset/img/Logo.jpg" alt="Fries & Code Logo" class="logo">
+        <!-- DEJO LOS ICONOS COMO GUIA PARA EL BACK -->
+        <div class="icons">
+            <span>🔍</span>
+            <button id="icono-carrito">🛒</button>
+        </div>         
+    </div>
+    <h1>✅ Resumen del Pedido</h1>
+  </header>
+
+  <main id="resumen-container">
+    <!-- Aquí se cargará el resumen -->
+  </main>
+
+  <div class="contenedor-boton">
+    <button id="pago" onclick="confirmarPago()">Confirmar y pagar</button>
+  </div>
+  
+  <footer>        
+    <p>&copy; 2025 Comida Fries & code. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const resumen = document.getElementById("resumen-container");
+    const pedido = JSON.parse(localStorage.getItem("pedido")) || [];
+    let total = 0;
+
+    if (pedido.length === 0) {
+      resumen.innerHTML = "<p>No hay productos en el pedido.</p>";
+    } else {
+      pedido.forEach(producto => {
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <h3>${producto.nombre}</h3>
+          <p>Precio: $${producto.precio}</p>
+          <p>Cantidad: ${producto.cantidad}</p>
+          <p>Subtotal: $${subtotal}</p>
+          <hr>
+        `;
+        resumen.appendChild(div);
+      });
+
+      const totalElement = document.createElement("h2");
+      totalElement.textContent = "Total a pagar: $" + total;
+      resumen.appendChild(totalElement);
+    }
+
+    function confirmarPago() {
+      alert("¡Gracias por tu compra! 🧾✨");
+      localStorage.removeItem("carrito");
+      localStorage.removeItem("pedido");
+      window.location.href = "/Fries-Code/asset/paginas/home.html";
+    }
+  </script>
+</body>
+</html>

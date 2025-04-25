@@ -53,5 +53,20 @@ document.addEventListener("DOMContentLoaded", () => {
     window.cerrarCarrito = function () {
       carritoBox.classList.add("oculto");
     };
+
+    window.realizarPago = function () {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío 😕");
+        return;
+      }
+    
+      // Guardamos el carrito actual para mostrarlo en la página de pago
+      localStorage.setItem("pedido", JSON.stringify(carrito));
+    
+      // Redireccionamos a la página de pago
+      window.location.href = "/Fries-Code/asset/paginas/pago.html";
+    };
 });
   
