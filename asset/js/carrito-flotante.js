@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("pedido", JSON.stringify(carrito));
     
       // Redireccionamos a la página de pago
-      window.location.href = "/asset/paginas/pago.html";
+      window.location.href = "/Fries-Code/asset/paginas/pago.html";
     };
 });
   
