@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Fries-Code/asset/css/contact.css">
+    <title>Contacto</title>
+    
+</head>
+
+<body>
+
+    <header>
+
+        <!-- ENCABEZADO -->
+        <div class="top-bar">
+            <a href="/Fries-Code/asset/paginas/pago.html" target="_blank">
+                <button class="menu-btn">🛒</button>
+            </a>
+            <img src="/Fries-Code/asset/img/Logo.jpg" alt="Fries & Code Logo" class="logo">
+            <!-- DEJO LOS ICONOS COMO GUIA PARA EL BACK -->
+            <div class="icons">
+                <span>🔍</span>
+                <button id="icono-carrito">☰</button>
+            </div>         
+        </div>
+        <nav class="navbar">
+            <a href="/Fries-Code/index.html" target="_blank">INICIO</a>
+            <a href="/Fries-Code/asset/paginas/about.html" target="_blank">SOBRE NOSOTROS</a>
+            <a href="/Fries-Code/asset/paginas/contact.html" target="_blank">CONTACTO</a>
+        </nav>
+
+    </header>
+
+    <main>
+            <h1>Contacto</h1>
+        <div class="contacto">
+            <form action="" method="" id="contact-form">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Email" required>
+                <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div id="mensaje-flotante" class="toast">
+            <p>¡Gracias <span id="usuario-nombre"></span>! Nos pondremos en contacto al correo <span id="usuario-correo"></span>.</p>
+        </div>
+
+        <div class="mapa">
+            <h2>Visita Nuestra Tienda</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.474236377978!2d-74.79644722501792!3d10.98779125516107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d3b6b6b6b6b%3A0x6b6b6b6b6b6b6b6b!2sAlcaldía%20de%20Barranquilla!5e0!3m2!1ses!2sco!4v1714060800000" 
+                width="400" 
+                height="270" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="enlace">
+            <p>Visita <a href="https://barranquilla.gov.co" target="_blank">Fries & Code</a> para tener el placer de atenderte.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Comida Fries & code. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/Fries-Code/asset/js/contact.js"></script>
+
+</body>
+</html>
