@@ -7,6 +7,7 @@
     <title>Contacto</title>
     
 </head>
+
 <body>
 
     <header>
@@ -34,12 +35,16 @@
     <main>
             <h1>Contacto</h1>
         <div class="contacto">
-            <form action="https://example.com/enviar" method="post">
+            <form action="" method="" id="contact-form">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Email" required>
                 <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
+        </div>
+
+        <div id="mensaje-flotante" class="toast">
+            <p>¡Gracias <span id="usuario-nombre"></span>! Nos pondremos en contacto al correo <span id="usuario-correo"></span>.</p>
         </div>
 
         <div class="mapa">
@@ -62,5 +67,8 @@
     <footer>
         <p>&copy; 2025 Comida Fries & code. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="/Fries-Code/asset/js/contact.js"></script>
+
 </body>
 </html>
