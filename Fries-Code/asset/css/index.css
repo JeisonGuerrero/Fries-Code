@@ -6,15 +6,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('https://i.pinimg.com/originals/b2/08/51/b20851fd9fddf42be7f2d67d32b7ac43.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  header {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 50vh; /* Ocupa toda la altura de la ventana */
-    background-image: url('/Fries-Code/asset/img/Logo.jpg'); /* Ruta de tu imagen */
-    background-size: contain; /* Asegura que la imagen cubra todo el espacio */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+
+  h1 {
+    color: #051a3e; /* Cambia el color del texto */
+  }
+
+  img {
+    margin: 20px;
+    width: 250px;
+    height: 180px;
+    border-radius: 5%;
   }
 
   .butom{
@@ -22,30 +35,17 @@ body {
     margin: 10px;
   }
 
+  .butom a{
+    text-decoration: none; /* Quita el subrayado del enlace */
+  }
+
   button{
     background-color: #39295c; /* Cambia el color de fondo del botón */
     color: white; /* Cambia el color del texto */
     padding: 15px 30px; /* Ajusta el tamaño del botón: alto y ancho */
-    margin: 50px 0 50px 0;
-    font-size: 50px; /* Cambia el tamaño de la fuente */
+    font-size: 20px; /* Cambia el tamaño de la fuente */
     border: none; /* Quita el borde */
     border-radius: 30px; /* Redondea las esquinas del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   }
-
-  main {
-    padding: 20px;
-    margin: 30px 0 30px 0;
-    text-align: center;
-    flex: 1
-  }
   
-  footer {
-    background-color: #222;
-    color: white;
-    padding: 10px;
-  }
-
-  footer p{
-    text-align: center;
-  }

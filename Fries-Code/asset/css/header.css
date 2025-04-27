@@ -39,3 +39,8 @@ text-decoration: none;
 color: black;
 font-weight: bold;
 }
+
+.icons a button {
+background-color: white;
+border: none;
+}

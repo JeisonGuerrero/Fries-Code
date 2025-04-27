@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lista = document.getElementById("lista-carrito");
     const totalSpan = document.getElementById("total-carrito");
   
-    if (!iconoCarrito || !carritoBox) return;
+    if (!iconoCarrito && !carritoBox) return console.log("No se encontraron los elementos del carrito.");
   
     // Usamos una función flecha para evitar que se llame antes de declarar
     iconoCarrito.addEventListener("click", () => window.mostrarCarrito());

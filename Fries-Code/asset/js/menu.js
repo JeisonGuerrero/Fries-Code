@@ -8,10 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
       tarjeta.classList.add("producto");
   
       tarjeta.innerHTML = `
-        <img src="${prod.imagen}" alt="${prod.nombre}" width="70">
-        <h4>${prod.nombre}</h4>
-        <p>Precio: $${prod.precio}</p>
-        <button class="btn-agregar">Añadir al carrito</button>
+        <div class="card">
+          <img class="card-img-top" src="${prod.imagen}" alt="${prod.nombre}" height="150">
+          <div class="card-body">
+            <h5 class="card-title">${prod.nombre}</h4>
+            <p class="card-text">Precio: $${prod.precio}</p>
+            <button class="btn-agregar">Añadir</button>
+          </div>
+        </div>
       `;
   
       const boton = tarjeta.querySelector(".btn-agregar");
