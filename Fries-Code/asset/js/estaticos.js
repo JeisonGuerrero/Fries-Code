@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-header").innerHTML = data;
-            // Solo cuando el header ya est\u00e9 cargado, ejecutamos esto:
+            // Solo cuando el header ya esta cargado, ejecutamos esto:
             cargarEventosHeader();
         })
         .catch(error => {
