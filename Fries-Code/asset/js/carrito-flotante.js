@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
       if (carrito.length === 0) {
-          alert("Tu carrito está vacío 😕");
+          alert("Tu carrito está vacío");
           return;
       }
 
