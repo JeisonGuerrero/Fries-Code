@@ -16,6 +16,12 @@ background: none;
 border: none;
 }
 
+.menu-btn:hover {
+background-color: #f0f0f0;
+border-radius: 5px;
+cursor: pointer;
+}
+
 .logo {
 height: 40px;
 }
@@ -40,7 +46,21 @@ color: black;
 font-weight: bold;
 }
 
-.icons a button {
+.navbar a:hover {
+background-color: #031b3c;
+border-radius: 5px;
+color: white;
+padding: 0px 10px;
+cursor: pointer;
+}
+
+.icons button {
 background-color: white;
 border: none;
+}
+
+.icons button:hover {
+background-color: #f0f0f0;
+border-radius: 5px;
+cursor: pointer;
 }
