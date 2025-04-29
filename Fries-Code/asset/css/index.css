@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    background-color:rgb(229, 228, 228);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/originals/b2/08/51/b20851fd9fddf42be7f2d67d32b7ac43.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+
+  h1 {
+    color: #051a3e; /* Cambia el color del texto */
+  }
+
+  img {
+    margin: 20px;
+    width: 250px;
+    height: 180px;
+    border-radius: 5%;
+  }
+
+  .butom{
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .butom a{
+    text-decoration: none; /* Quita el subrayado del enlace */
+  }
+
+  button{
+    background-color: #39295c; /* Cambia el color de fondo del botón */
+    color: white; /* Cambia el color del texto */
+    padding: 15px 30px; /* Ajusta el tamaño del botón: alto y ancho */
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+    border: none; /* Quita el borde */
+    border-radius: 30px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
