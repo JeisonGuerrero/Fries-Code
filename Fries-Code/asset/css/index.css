@@ -48,4 +48,8 @@ body {
     border-radius: 30px; /* Redondea las esquinas del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   }
+
+  button:hover {
+    background-color: #5a4b8c; /* Cambia el color de fondo al pasar el mouse */
+  }
   
