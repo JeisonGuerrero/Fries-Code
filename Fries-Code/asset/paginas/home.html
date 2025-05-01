@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Logos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="/Fries-Code/asset/css/home.css">
     <link rel="stylesheet" href="/Fries-Code/asset/css/footer.css">
     <link rel="stylesheet" href="/Fries-Code/asset/css/header.css">
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Home - Fries & Code</title>
 </head>
 <body>
-    <!-- EMCABEZADO -->
+    <!-- ENCABEZADO -->
     <div id="template-header"></div>
 
     <main>
@@ -26,8 +35,8 @@
         <h3>Mi Carrito</h3>
         <ul id="lista-carrito"></ul>
         <p>Total: $<span id="total-carrito">0</span></p>
-        <button onclick="realizarPago()">Finalizar compra</button>
-        <button onclick="cerrarCarrito()">Cerrar</button>
+        <button class="btn btn-success" onclick="realizarPago()">Finalizar compra</button>
+        <button class="btn btn-secondary" onclick="cerrarCarrito()">Cerrar</button>
     </div>
 
     <!-- FOOTER -->

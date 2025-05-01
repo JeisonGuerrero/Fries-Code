@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
   
         localStorage.setItem("carrito", JSON.stringify(carrito));
-        alert(`${prod.nombre} añadido al carrito`);
+        Swal.fire({
+          title: `${prod.nombre}`,
+          text:  "Ha sido añadido al carrito",
+          icon: "success"
+        });
 
         if (typeof window.mostrarCarrito === "function") {
             window.mostrarCarrito();
