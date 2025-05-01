@@ -53,8 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
       if (carrito.length === 0) {
-          alert("Tu carrito está vacío");
-          return;
+          Swal.fire({
+              title: "Carrito vacío",
+              text: "No hay productos en el carrito.",
+              icon: "warning",
+              confirmButtonText: "Aceptar"
+          });
       }
 
       localStorage.setItem("pedido", JSON.stringify(carrito));
