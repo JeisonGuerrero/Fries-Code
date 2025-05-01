@@ -11,15 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
   productos.forEach(prod => {
       const tarjeta = document.createElement("div");
       tarjeta.classList.add("producto");
+    //   para ingresar por producto
+      tarjeta.setAttribute("data-id", prod.id);
+    //   para filtrar por categoria de productos
       tarjeta.setAttribute("data-category", prod.categoria);
 
       tarjeta.innerHTML = `
           <div class="card" data-category="${prod.categoria}">
-              <img class="card-img-top" src="${prod.imagen}" alt="${prod.nombre}" height="150">
+             <img class="card-img-top" src="${prod.imagen}" alt="${prod.nombre}" height="150" >
               <div class="card-body">
                   <h5 class="card-title">${prod.nombre}</h5>
                   <p class="card-text">Precio: $${prod.precio}</p>
-                  <button class="btn-agregar">Añadir</button>
+                  <div class="btn-container">
+                    <button class="btn-agregar">Añadir</button>
+                    <button class="btn-detalle" data-id="${prod.id}">Detalle</button>
+                  </div>                 
               </div>
           </div>
       `;
