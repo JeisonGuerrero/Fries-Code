@@ -9,12 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al cargar footer", error);
         });
 
-    fetch("/Fries-Code/asset/paginas/Estaticos/header.html")
+        fetch("/Fries-Code/asset/paginas/Estaticos/header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-header").innerHTML = data;
+    
             // Ahora que el header está cargado, cargamos los eventos
             cargarEventosHeader();
+    
+            // Llama a inicializarFiltro después de cargar el header
+            if (typeof window.inicializarFiltro === "function") {
+                console.log("Llamando a inicializarFiltro después de cargar el header...");
+                window.inicializarFiltro();
+            }
         })
         .catch(error => {
             console.error("Error al cargar header", error);

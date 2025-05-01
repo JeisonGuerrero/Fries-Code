@@ -9,6 +9,7 @@ box-sizing: border-box;
 body {
 background-color:#ebe1d5;
 padding: 10px;
+min-height: 100vh;
 }
 
 /* OBJETO COMIDA */
@@ -87,6 +88,11 @@ display: none;
 margin-bottom: 10px;
 }
 
+.btn-container{
+display: flex;
+justify-content: space-between;
+}
+
 .btn-agregar {
 background-color: #eae0d4;
 padding: 5px;
@@ -99,3 +105,17 @@ font-weight: bold;
 background-color: #d4cfc4;
 cursor: pointer;
 }
+
+.btn-detalle {
+background-color: #8d8c8a;
+padding: 5px;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.btn-detalle:hover {
+background-color: #7a7976;
+cursor: pointer;
+}
+
