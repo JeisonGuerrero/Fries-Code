@@ -1,0 +1,89 @@
+<!-- pago.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frides-Code | Carrito de Compra</title>
+  <style>
+    body { font-family: sans-serif; background: #121212; color: #fff; padding: 2rem; }
+    .item { background: #1e1e1e; margin-bottom: 1rem; padding: 1rem; border-radius: 10px; display: flex; align-items: center; }
+    img { width: 80px; height: 80px; border-radius: 10px; margin-right: 1rem; }
+    button { background: #ff4d4d; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; margin-top: 0.5rem; }
+    .cantidad button { width: 32px; height: 32px; border-radius: 50%; font-weight: bold; }
+    .acciones { display: flex; gap: 1rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>🛒 Tu Carrito</h1>
+  <div id="carrito"></div>
+  <div><strong>Total:</strong> <span id="total">$0</span></div>
+  <div class="acciones">
+    <button onclick="vaciarCarrito()">Vaciar carrito 🗑️</button>
+    <button onclick="pagar()">Pagar 💳</button>
+  </div>
+  <a href="productos.html"><button>Volver a productos 🔙</button></a>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    function renderCarrito() {
+      const cont = document.getElementById("carrito");
+      cont.innerHTML = "";
+      let total = 0;
+      carrito.forEach((item, index) => {
+        total += item.precio * item.cantidad;
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerHTML = `
+          <img src="${item.imagen}" alt="${item.nombre}">
+          <div>
+            <h3>${item.nombre}</h3>
+            <p>Precio: $${item.precio.toLocaleString()}</p>
+            <div class="cantidad">
+              <button onclick="cambiarCantidad(${index}, -1)">−</button>
+              <span>${item.cantidad}</span>
+              <button onclick="cambiarCantidad(${index}, 1)">+</button>
+            </div>
+            <button onclick="eliminar(${index})">Eliminar ❌</button>
+          </div>
+        `;
+        cont.appendChild(div);
+      });
+      document.getElementById("total").textContent = `$${total.toLocaleString()}`;
+    }
+
+    function cambiarCantidad(index, cambio) {
+      carrito[index].cantidad = Math.max(1, carrito[index].cantidad + cambio);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      renderCarrito();
+    }
+
+    function eliminar(index) {
+      carrito.splice(index, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      renderCarrito();
+    }
+
+    function vaciarCarrito() {
+      if (confirm("¿Vaciar todo el carrito?")) {
+        carrito = [];
+        localStorage.removeItem("carrito");
+        renderCarrito();
+      }
+    }
+
+    function pagar() {
+      if (carrito.length === 0) {
+        alert("🛒 Tu carrito está vacío.");
+      } else {
+        alert("🎉 ¡Gracias por su compra! Vuelva pronto 😊");
+        carrito = [];
+        localStorage.removeItem("carrito");
+        renderCarrito();
+      }
+    }
+
+    renderCarrito();
+  </script>
+</body>
+</html>
