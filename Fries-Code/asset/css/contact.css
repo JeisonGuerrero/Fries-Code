@@ -1,0 +1,59 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    background-color: #ebe1d5;
+ }
+
+.contacto {
+    background-color: aliceblue;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.mapa {
+    margin-top: 20px;
+    border: black solid 1px;
+    border-radius: 20px;
+    width: 56%;
+    background-color: white;
+}
+.enlace {
+    margin-top: 20px;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
