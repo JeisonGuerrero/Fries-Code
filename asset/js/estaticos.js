@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Cargar el footer y el header
-    fetch("/Fries-Code/asset/paginas/Estaticos/footer.html")
+    fetch("/asset/paginas/Estaticos/footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-footer").innerHTML = data;
@@ -9,13 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al cargar footer", error);
         });
 
-    fetch("/Fries-Code/asset/paginas/Estaticos/header.html")
+    fetch("/asset/paginas/Estaticos/header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-header").innerHTML = data;
             // Ahora que el header está cargado, cargamos los eventos
             cargarEventosHeader();
             actualizarContadorCarrito();
+             // Llama a inicializarFiltro después de cargar el encabezado
+            if (typeof window.inicializarFiltro === "function") {
+                window.inicializarFiltro();
+            }
         })
         .catch(error => {
             console.error("Error al cargar header", error);
@@ -104,12 +108,16 @@ function realizarPago() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     if (carrito.length === 0) {
-        alert("Tu carrito está vacío 😕");
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Tu carrito esta vacio!, revisa tu carrito."
+          });
         return;
     }
 
     localStorage.setItem("pedido", JSON.stringify(carrito));
-    window.location.href = "/Fries-Code/asset/paginas/pago.html";
+    window.location.href = "/asset/paginas/pago.html";
 }
 
 function vaciarCarrito() {
