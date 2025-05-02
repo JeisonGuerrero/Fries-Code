@@ -1,7 +1,9 @@
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 main {
@@ -13,10 +15,10 @@ main {
 }
 
 .content {
-display: flex;
-justify-content: space-around;
-align-items: flex-start;
-padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
 }
 
 .text-box {
@@ -30,5 +32,16 @@ padding: 40px 20px;
 .image-box img {
   width: 100%;
   max-width: 100px;
+  border-radius: 5px;
+}
+
+.box-logo{
+  width: 45%;
+  text-align: center;
+}
+
+.box-logo img{
+  width: 100%;
+  max-width: 300px;
   border-radius: 5px;
 }

@@ -15,31 +15,92 @@ main {
     background-color: #ebe1d5;
  }
 
+.contenedor{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
 .contacto {
     background-color: aliceblue;
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #684848;
     border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0 , 0.2);
+    width: 45%;
 }
 
-input, textarea {
+.contacto h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contacto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto input, .contacto textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d8d2d2;
+    border-radius: 5px;
+}
+
+.contacto input[type="submit"]{
+    background-color:rgb(235, 235, 220);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto input[type="submit"]:hover{
+    background-color: #0a122e;
+}
+
+/*input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
-}
+}*/
 
 .mapa {
     margin-top: 20px;
     border: black solid 1px;
     border-radius: 20px;
-    width: 56%;
+    width: 80%;
+    max-width: 800px;
     background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+.mapa h2{
+    margin-top: 0;
+    font-weight: bold;
+    color: #131010;
+}
+
+
+.mapa iframe{
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+}
+
 .enlace {
     margin-top: 20px;
 }
@@ -56,4 +117,15 @@ input, textarea {
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+}
+
+.box-logo{
+    width: 45%;
+    text-align: center;
+  }
+  
+.box-logo img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
 }
