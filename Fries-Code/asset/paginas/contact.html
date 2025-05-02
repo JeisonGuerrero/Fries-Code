@@ -18,16 +18,25 @@
     <div id="template-header"></div>
 
     <main>
-            <h1>Contacto</h1>
-        <div class="contacto">
-            <form action="" method="" id="contact-form">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Email" required>
-                <textarea name="mensaje" resize="none" rows="5" placeholder="Tu Mensaje" required></textarea>
-                <button type="submit" class="btn btn-success">Enviar</button>
-            </form>
-        </div>
+          
+        <div class="contenedor">
+            <div class="contacto">
+                <div>
+                    <h1>Contacto</h1>
+                </div>
+                <form action="" method="" id="contact-form">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                    <textarea name="mensaje" resize="none" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            </div>
 
+            <div class="box-logo">
+                <img src="/Fries-Code/asset/img/Logo.jpg" alt="">
+            </div>
+        </div>
+       
         <div id="mensaje-flotante" class="toast">
             <p>¡Gracias <span id="usuario-nombre"></span>! Nos pondremos en contacto al correo <span id="usuario-correo"></span>.</p>
         </div>
