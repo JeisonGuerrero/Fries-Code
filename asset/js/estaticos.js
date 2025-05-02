@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarContadorCarrito(); // ✅ MOSTRAR número del carrito apenas carga la página
 });
 
-// !No cambiar esto¡
+// !No cambiar esto¡ nunca
 // Funciones para el carrito
 function mostrarCarrito() {
     const carritoBox = document.getElementById("carrito-flotante");
