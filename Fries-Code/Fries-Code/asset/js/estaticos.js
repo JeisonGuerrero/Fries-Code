@@ -9,24 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al cargar footer", error);
         });
 
-        fetch("/Fries-Code/asset/paginas/Estaticos/header.html")
+    fetch("/Fries-Code/asset/paginas/Estaticos/header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-header").innerHTML = data;
-    
             // Ahora que el header está cargado, cargamos los eventos
             cargarEventosHeader();
-    
-            // Llama a inicializarFiltro después de cargar el header
-            if (typeof window.inicializarFiltro === "function") {
-                console.log("Llamando a inicializarFiltro después de cargar el header...");
-                window.inicializarFiltro();
-            }
+            actualizarContadorCarrito();
         })
         .catch(error => {
             console.error("Error al cargar header", error);
         });
+
+    actualizarContadorCarrito(); // ✅ MOSTRAR número del carrito apenas carga la página
 });
+
 // !No cambiar esto¡
 // Funciones para el carrito
 function mostrarCarrito() {
@@ -59,7 +56,25 @@ function mostrarCarrito() {
     }
 
     totalSpan.textContent = total;
+    actualizarContadorCarrito(); // ✅ ACTUALIZA el número del carrito cuando se muestra
 }
+
+function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const total = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+    const contador = document.getElementById("contador-carrito");
+
+    if (contador) {
+        contador.textContent = total;
+        contador.style.display = total > 0 ? "flex" : "none";
+        // Activar animación
+        contador.classList.remove("animado");
+        void contador.offsetWidth; // Forzar reflow para reiniciar animación
+        contador.classList.add("animado");
+    }
+}
+
+
 
 function restarProducto(index) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -97,6 +112,15 @@ function realizarPago() {
     window.location.href = "/Fries-Code/asset/paginas/pago.html";
 }
 
+function vaciarCarrito() {
+    if (confirm("¿Estás seguro de que quieres vaciar el carrito?")) {
+        localStorage.removeItem("carrito");
+        mostrarCarrito();
+        actualizarContadorCarrito();
+    }
+}
+
+
 function cargarEventosHeader() {
     const iconoCarrito = document.getElementById("icono-carrito");
     if (iconoCarrito) {
@@ -105,3 +129,4 @@ function cargarEventosHeader() {
         });
     }
 }
+
