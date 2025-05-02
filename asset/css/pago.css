@@ -74,3 +74,105 @@ footer {
 footer p{
   text-align: center;
 }
+
+
+/* estilo del contenedor de pago */
+
+.contenedor-pago {
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #ff4d4d;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.producto img {
+  border-radius: 10px;
+  margin-right: 1rem;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.info h2 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+.info p {
+  margin: 0.2rem 0;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cantidad button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cantidad button:hover {
+  background-color: #cc0000;
+}
+
+
+.btn-pagar {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-pagar:hover {
+  background-color: #cc0000;
+}
+
+.btn-eliminar {
+  background-color: #666;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.btn-eliminar:hover {
+  background-color: #999;
+}
+
+.acciones { 
+  display: flex;
+ gap: 1rem; 
+ margin-top: 1rem;
+}
