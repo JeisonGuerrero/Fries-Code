@@ -9,8 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     contenedor.addEventListener("click", (e) => {
         if (e.target.classList.contains("btn-detalle")) {
             const idProducto = e.target.getAttribute("data-id");
+            console.log(`ID del producto seleccionado: ${idProducto}`);
+
+            if (!idProducto) {
+                console.error("El ID del producto no se encontró.");
+                return;
+            }
+
             localStorage.setItem("productoSeleccionado", idProducto);
-            window.location.href = "/Fries-Code/asset/paginas/detalle.html";
+            console.log("Redirigiendo a la página de detalles...");
+            window.location.href = "/asset/paginas/detalle.html";
         }
     });
 });
