@@ -40,10 +40,11 @@ main {
     margin-bottom: 20px;
 }
 
-.contacto form{
+#contact-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .contacto input, .contacto textarea{
@@ -67,14 +68,14 @@ main {
     background-color: #0a122e;
 }
 
-/*input, textarea {
+input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
-}*/
+}
 
 .mapa {
     margin-top: 20px;
