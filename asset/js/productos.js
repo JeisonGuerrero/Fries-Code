@@ -6,7 +6,7 @@ const productos = [
       nombre: "Perro Clásico",
       precio: 12000,
       categoria: "perro",
-      imagen: "./asset/img/perro_sencillo.avif",
+      imagen: "/img/perro_sencillo.avif",
       descripcion:"Perro caliente con pan brioche, salchicha clasica de la casa, queso costeño, papitas cabello de angel, cebolla, lechuga y salsas de la casa al gusto. Calentado por 5 minutos en baño maría."
     },
     {
@@ -14,7 +14,7 @@ const productos = [
       nombre: "Perro Mozzarella",
       precio: 14000,
       categoria: "perro",
-      imagen: "/asset/img/perro-mozzarella.jpeg",
+      imagen: "/img/perro-mozzarella.jpeg",
       descripcion:"Pan tipo hot dog, salchicha caliente, mozzarella derretida, papas chongo, salsas como ketchup, mostaza, salsa tártara, salsa de piña, cebolla caramelizada y tocineta crujiente."
     },
     {
@@ -22,7 +22,7 @@ const productos = [
       nombre: "Perro Especial",
       precio: 16000,
       categoria: "perro",
-      imagen: "/asset/img/perro_especial.jpg",
+      imagen: "/img/perro_especial.jpg",
       descripcion:"Pan tipo hot dog, salchicha caliente, mozzarella derretida, guacamole, cebolla morada encurtida, jalapeños, mayonesa de ajo, y salsa de chipotle."
     },
     {
@@ -30,7 +30,7 @@ const productos = [
       nombre: "Pizza Hawaiana",
       precio: 18000,
       categoria: "pizza",
-      imagen: "/asset/img/pizza_hawaiana.avif",
+      imagen: "/img/pizza_hawaiana.avif",
       descripcion:"Masa crujiente, salsa de tomate, queso mozzarella, jamón, piña y orégano."
     },
     {
@@ -38,7 +38,7 @@ const productos = [
       nombre: "Pizza de Pepperoni",
       precio: 20000,
       categoria: "pizza",
-      imagen: "/asset/img/pizza_peperoni.jpeg",
+      imagen: "/img/pizza_peperoni.jpeg",
       descripcion:"Masa crujiente, salsa de tomate, queso mozzarella, rodajas de pepperoni y orégano."
     },
     {
@@ -46,7 +46,7 @@ const productos = [
       nombre: "Pizza 3 Quesos",
       precio: 22000,
       categoria: "pizza",
-      imagen: "/asset/img/pizza_queso.jpg",
+      imagen: "/img/pizza_queso.jpg",
       descripcion:"Masa crujiente, salsa de tomate, mezcla de queso mozzarella, cheddar y parmesano, y orégano."
     },
     {
@@ -54,7 +54,7 @@ const productos = [
       nombre: "Hamburguesa Clásica",
       precio: 15000,
       categoria: "hamburguesa",
-      imagen: "/asset/img/hamburguesa_clasica.avif",
+      imagen: "/img/hamburguesa_clasica.avif",
       descripcion:"Pan suave, carne de res jugosa, queso cheddar, lechuga, tomate, cebolla, mayonesa, ketchup y mostaza."
     },
     {
@@ -62,7 +62,7 @@ const productos = [
       nombre: "Hamburguesa Doble",
       precio: 18000,
       categoria: "hamburguesa",
-      imagen: "/asset/img/hamburguesa_doble.webp",
+      imagen: "/img/hamburguesa_doble.webp",
       descripcion:"Pan suave, dos carnes de res jugosas, queso cheddar, lechuga, tomate, cebolla, mayonesa, ketchup y mostaza."
     },
     {
@@ -70,7 +70,7 @@ const productos = [
       nombre: "Hamburguesa BBQ",
       precio: 20000,
       categoria: "hamburguesa",
-      imagen: "/asset/img/hamburguesa_BBQ.jpg",
+      imagen: "/img/hamburguesa_BBQ.jpg",
       descripcion:"Pan suave, carne de res jugosa, queso cheddar, cebolla caramelizada, bacon crujiente, lechuga y salsa barbacoa."
     }
   ];
