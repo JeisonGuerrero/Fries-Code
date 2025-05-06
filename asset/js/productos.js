@@ -6,7 +6,7 @@ const productos = [
       nombre: "Perro Clásico",
       precio: 12000,
       categoria: "perro",
-      imagen: "../img/perro_sencillo.avif",
+      imagen: "/Fries-Code/assets/img/perro_clasico.jpg",
       descripcion:"Perro caliente con pan brioche, salchicha clasica de la casa, queso costeño, papitas cabello de angel, cebolla, lechuga y salsas de la casa al gusto. Calentado por 5 minutos en baño maría."
     },
     {
