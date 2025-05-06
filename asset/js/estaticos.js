@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al cargar footer", error);
         });
 
-    fetch("../asset/paginas/Estaticos/header.html")
+    fetch("./paginas/Estaticos/header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-header").innerHTML = data;
