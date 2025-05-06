@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Cargar el footer y el header
-    fetch("../paginas/Estaticos/footer.html")
+    fetch("../../paginas/Estaticos/footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("template-footer").innerHTML = data;
