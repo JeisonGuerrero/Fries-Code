@@ -25,19 +25,22 @@
 
   <main id="resumen-container">
     <!-- Aquí se cargará el resumen -->
+    <h1 >🧾 Resumen de tu pedido</h1>
   </main>
 
-  <div class="contenedor-boton">
-    <button id="pago" onclick="confirmarPago()">Confirmar y pagar</button>
+    <div class="acciones">
+      <button onclick="vaciarCarrito()" class="btn-pagar">Vaciar carrito 🗑️</button>
+    <button class="btn-pagar" onclick="confirmarPago()">Confirmar y pagar</button>
   </div>
   
   <!-- FOOTER -->
   <div id="template-footer"></div>
-
+  <!-- aqui va un comentario -->
   <!-- Scripts  -->
   <script src="asset/js/estaticos.js"></script>
   <script src="asset/js/productos.js"></script>
   <script src="asset/js/menu.js"></script>
+  <script src="asset/js/pago.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
   <script>
