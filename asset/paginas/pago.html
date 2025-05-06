@@ -11,9 +11,9 @@
   <!-- sweetalert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Estilos CSS -->
-  <link rel="stylesheet" href="/asset/css/pago.css" />
-  <link rel="stylesheet" href="/asset/css/footer.css">
-  <link rel="stylesheet" href="/asset/css/header.css">
+  <link rel="stylesheet" href="asset/css/pago.css" />
+  <link rel="stylesheet" href="asset/css/footer.css">
+  <link rel="stylesheet" href="asset/css/header.css">
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,11 +37,45 @@
   <div id="template-footer"></div>
   <!-- aqui va un comentario -->
   <!-- Scripts  -->
-  <script src="/asset/js/estaticos.js"></script>
-  <script src="/asset/js/productos.js"></script>
-  <script src="/asset/js/menu.js"></script>
-  <script src="../js/pago.js"></script>
+  <script src="asset/js/estaticos.js"></script>
+  <script src="asset/js/productos.js"></script>
+  <script src="asset/js/menu.js"></script>
+  <script src="asset/js/pago.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
+  <script>
+    const resumen = document.getElementById("resumen-container");
+    const pedido = JSON.parse(localStorage.getItem("pedido")) || [];
+    let total = 0;
+
+    if (pedido.length === 0) {
+      resumen.innerHTML = "<p>No hay productos en el pedido.</p>";
+    } else {
+      pedido.forEach(producto => {
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <h3>${producto.nombre}</h3>
+          <p>Precio: $${producto.precio}</p>
+          <p>Cantidad: ${producto.cantidad}</p>
+          <p>Subtotal: $${subtotal}</p>
+          <hr>
+        `;
+        resumen.appendChild(div);
+      });
+
+      const totalElement = document.createElement("h2");
+      totalElement.textContent = "Total a pagar: $" + total;
+      resumen.appendChild(totalElement);
+    }
+
+    function confirmarPago() {
+      alert("¡Gracias por tu compra! 🧾✨");
+      localStorage.removeItem("carrito");
+      localStorage.removeItem("pedido");
+      window.location.href = "asset/paginas/home.html";
+    }
+  </script>
 </body>
 </html>
