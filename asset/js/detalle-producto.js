@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             localStorage.setItem("productoSeleccionado", idProducto);
             console.log("Redirigiendo a la página de detalles...");
-            window.location.href = "/asset/paginas/detalle.html";
+            window.location.href = "asset/paginas/detalle.html";
         }
     });
 });
