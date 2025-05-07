@@ -117,7 +117,7 @@ function realizarPago() {
     }
 
     localStorage.setItem("pedido", JSON.stringify(carrito));
-    window.location.href = "Fries-Code/asset/paginas/pago.html";
+    window.location.href = "pago.html";
 }
 
 function vaciarCarrito() {
