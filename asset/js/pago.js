@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("🎉¡Gracias por su compra! 🛍️\n 🎉 Vuelva pronto 😊");
         localStorage.removeItem("carrito");
         localStorage.removeItem("pedido");
-        window.location.href = "/asset/paginas/home.html";
+        window.location.href = "home.html";
     }
 
     renderizarResumen();
